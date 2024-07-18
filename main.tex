@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{GR HW4}
+\author{yonah.weiner }
+\date{July 2024}
+
+\begin{document}
+
+\maketitle
+
+\subsection*{Question 1}
+\subsubsection*{1.}
+The covariant derivative is defined as:
+\begin{equation*}
+    \nabla_iv_j=\partial_iv_j-\Gamma^k_{ij}v_k
+\end{equation*}
+\begin{equation*}
+    \Gamma^i_{kl}=\frac{1}{2}g^{im}\left(\partial_l g_{mk}+\partial_k g_{ml}-\partial_m g_{kl}\right)
+\end{equation*}
+In class we saw that for d=2 euclidean space, the non vanishing part of the Chrystoffel symbol is:
+\begin{equation}
+    \Gamma^r_{\theta \theta}=-r
+\end{equation}
+\begin{equation}
+    \Gamma^{\theta }_{r \theta}=\Gamma^\theta_{\theta r}=1/r
+\end{equation}
+plugging this in to the covariant derivative definition:
+\begin{equation*}
+\begin{split}
+\nabla_r v_r &= \partial_rv_r\\
+\nabla_r v_\theta &= \partial_r v_\theta  - \Gamma^\theta_{r\theta}v_\theta= \partial_r v_\theta  - \frac{v_\theta}{r}\\
+\nabla_\theta v_r &= \partial_\theta v_r  - \Gamma^\theta_{\theta r}v_\theta= \partial_\theta v_r  - \frac{v_r}{r}\\
+\nabla_\theta v_\theta &= \partial_\theta v_\theta -\Gamma^r_{\theta\theta}v_r= \partial_\theta v_\theta +rv_r\\
+\end{split}
+\end{equation*}
+\subsubsection*{2.}
+For the space we are working in:
+\begin{equation*}
+    g_{ij}=\begin{pmatrix}
+        1 & 0\\
+        0 & r^2\\
+    \end{pmatrix}\Rightarrow g=r^2
+\end{equation*}
+We plug this into the given expression:
+\begin{equation}
+\begin{split}
+    \nabla_i V^i
+    &=\frac{1}{\sqrt{g}}\partial_i\left(\sqrt{g}V^i\right)\\
+    &=\frac{1}{r}\partial_r\left(rV^r\right)+\frac{1}{r}\partial_\theta\left(rV^\theta\right)\\
+\end{split}
+\end{equation}
+\end{document}
